@@ -6,4 +6,4 @@
 
 ## Aplication
 
-<img src="appPreview.png" alt="App preview">
+<img src="appPreview.PNG" alt="App preview">
