@@ -55,9 +55,9 @@ namespace RotateImageApp
             this.LblOutLocation.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.LblOutLocation.Location = new System.Drawing.Point(12, 9);
             this.LblOutLocation.Name = "LblOutLocation";
-            this.LblOutLocation.Size = new System.Drawing.Size(118, 21);
+            this.LblOutLocation.Size = new System.Drawing.Size(104, 21);
             this.LblOutLocation.TabIndex = 0;
-            this.LblOutLocation.Text = "Output location";
+            this.LblOutLocation.Text = "Output folder";
             // 
             // TxtBOutputLoc
             // 
@@ -66,17 +66,17 @@ namespace RotateImageApp
             this.TxtBOutputLoc.Multiline = true;
             this.TxtBOutputLoc.Name = "TxtBOutputLoc";
             this.TxtBOutputLoc.ReadOnly = true;
-            this.TxtBOutputLoc.Size = new System.Drawing.Size(864, 37);
+            this.TxtBOutputLoc.Size = new System.Drawing.Size(932, 37);
             this.TxtBOutputLoc.TabIndex = 1;
             // 
             // BtnSelectOutput
             // 
             this.BtnSelectOutput.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.BtnSelectOutput.Location = new System.Drawing.Point(882, 33);
+            this.BtnSelectOutput.Location = new System.Drawing.Point(950, 33);
             this.BtnSelectOutput.Name = "BtnSelectOutput";
-            this.BtnSelectOutput.Size = new System.Drawing.Size(114, 37);
+            this.BtnSelectOutput.Size = new System.Drawing.Size(46, 37);
             this.BtnSelectOutput.TabIndex = 2;
-            this.BtnSelectOutput.Text = "Select";
+            this.BtnSelectOutput.Text = "...";
             this.BtnSelectOutput.UseVisualStyleBackColor = true;
             this.BtnSelectOutput.Click += new System.EventHandler(this.BtnSelectOutput_Click);
             // 
@@ -87,7 +87,7 @@ namespace RotateImageApp
             this.TxtBInputFile.Multiline = true;
             this.TxtBInputFile.Name = "TxtBInputFile";
             this.TxtBInputFile.ReadOnly = true;
-            this.TxtBInputFile.Size = new System.Drawing.Size(864, 37);
+            this.TxtBInputFile.Size = new System.Drawing.Size(932, 37);
             this.TxtBInputFile.TabIndex = 4;
             // 
             // lblFile
@@ -96,24 +96,20 @@ namespace RotateImageApp
             this.lblFile.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lblFile.Location = new System.Drawing.Point(12, 89);
             this.lblFile.Name = "lblFile";
-            this.lblFile.Size = new System.Drawing.Size(71, 21);
+            this.lblFile.Size = new System.Drawing.Size(93, 21);
             this.lblFile.TabIndex = 3;
-            this.lblFile.Text = "Input file";
+            this.lblFile.Text = "Input image";
             // 
             // BtnInputFile
             // 
             this.BtnInputFile.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.BtnInputFile.Location = new System.Drawing.Point(882, 113);
+            this.BtnInputFile.Location = new System.Drawing.Point(950, 113);
             this.BtnInputFile.Name = "BtnInputFile";
-            this.BtnInputFile.Size = new System.Drawing.Size(114, 37);
+            this.BtnInputFile.Size = new System.Drawing.Size(46, 37);
             this.BtnInputFile.TabIndex = 5;
-            this.BtnInputFile.Text = "Select";
+            this.BtnInputFile.Text = "...";
             this.BtnInputFile.UseVisualStyleBackColor = true;
             this.BtnInputFile.Click += new System.EventHandler(this.BtnInputFile_Click);
-            // 
-            // OfdInput
-            // 
-            this.OfdInput.FileName = "openFileDialog1";
             // 
             // LblOrientation
             // 
@@ -121,9 +117,9 @@ namespace RotateImageApp
             this.LblOrientation.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.LblOrientation.Location = new System.Drawing.Point(12, 170);
             this.LblOrientation.Name = "LblOrientation";
-            this.LblOrientation.Size = new System.Drawing.Size(50, 21);
+            this.LblOrientation.Size = new System.Drawing.Size(57, 21);
             this.LblOrientation.TabIndex = 7;
-            this.LblOrientation.Text = "Angle";
+            this.LblOrientation.Text = "Angles";
             // 
             // CkB90
             // 
@@ -131,7 +127,7 @@ namespace RotateImageApp
             this.CkB90.Checked = true;
             this.CkB90.CheckState = System.Windows.Forms.CheckState.Checked;
             this.CkB90.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.CkB90.Location = new System.Drawing.Point(12, 194);
+            this.CkB90.Location = new System.Drawing.Point(15, 194);
             this.CkB90.Name = "CkB90";
             this.CkB90.Size = new System.Drawing.Size(54, 25);
             this.CkB90.TabIndex = 8;
@@ -144,7 +140,7 @@ namespace RotateImageApp
             this.CkB180.Checked = true;
             this.CkB180.CheckState = System.Windows.Forms.CheckState.Checked;
             this.CkB180.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.CkB180.Location = new System.Drawing.Point(76, 194);
+            this.CkB180.Location = new System.Drawing.Point(79, 194);
             this.CkB180.Name = "CkB180";
             this.CkB180.Size = new System.Drawing.Size(63, 25);
             this.CkB180.TabIndex = 9;
@@ -157,7 +153,7 @@ namespace RotateImageApp
             this.ckB270.Checked = true;
             this.ckB270.CheckState = System.Windows.Forms.CheckState.Checked;
             this.ckB270.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.ckB270.Location = new System.Drawing.Point(145, 194);
+            this.ckB270.Location = new System.Drawing.Point(148, 194);
             this.ckB270.Name = "ckB270";
             this.ckB270.Size = new System.Drawing.Size(63, 25);
             this.ckB270.TabIndex = 10;
@@ -170,7 +166,7 @@ namespace RotateImageApp
             this.CkB360.Checked = true;
             this.CkB360.CheckState = System.Windows.Forms.CheckState.Checked;
             this.CkB360.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.CkB360.Location = new System.Drawing.Point(214, 194);
+            this.CkB360.Location = new System.Drawing.Point(217, 194);
             this.CkB360.Name = "CkB360";
             this.CkB360.Size = new System.Drawing.Size(63, 25);
             this.CkB360.TabIndex = 11;
@@ -181,7 +177,7 @@ namespace RotateImageApp
             // 
             this.NUDCustom.DecimalPlaces = 2;
             this.NUDCustom.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.NUDCustom.Location = new System.Drawing.Point(283, 194);
+            this.NUDCustom.Location = new System.Drawing.Point(286, 190);
             this.NUDCustom.Maximum = new decimal(new int[] {
             360,
             0,
@@ -195,7 +191,7 @@ namespace RotateImageApp
             // 
             this.LblCustom.AutoSize = true;
             this.LblCustom.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.LblCustom.Location = new System.Drawing.Point(368, 195);
+            this.LblCustom.Location = new System.Drawing.Point(371, 192);
             this.LblCustom.Name = "LblCustom";
             this.LblCustom.Size = new System.Drawing.Size(64, 21);
             this.LblCustom.TabIndex = 13;

@@ -45,6 +45,10 @@ namespace RotateImageApp
 
         private void BtnGenerate_Click(object sender, EventArgs e)
         {
+            bool isValid = ValidateFields();
+            if (!isValid)
+                return;
+
             string messageTitle = "Information";
             string messageInfo = "This operation will be generate images in folder selected with selected angles";
 
@@ -53,8 +57,8 @@ namespace RotateImageApp
             {
                 try
                 {
-                    string inputImage = OfdInput.FileName,
-                           outputImage = FbdOutput.SelectedPath;
+                    string inputImage = TxtBInputFile.Text,
+                           outputImage = TxtBOutputLoc.Text;
                     float[] angles = GenerateArrAngles();
 
                     ImageService.GenerateSaveImages(inputImage, outputImage, angles);
@@ -72,17 +76,41 @@ namespace RotateImageApp
             }
         }
 
+        private bool ValidateFields()
+        {
+            if (string.IsNullOrEmpty(TxtBOutputLoc.Text))
+            {
+                MessageBox.Show("Output location is required", "Output location required");
+                return false;
+            }
+
+            if (string.IsNullOrEmpty(TxtBInputFile.Text))
+            {
+                MessageBox.Show("Input image is required", "Input image required");
+                return false;
+            }
+
+            bool noAnglesSelected = !CkB90.Checked && !CkB180.Checked && !ckB270.Checked && !CkB360.Checked && NUDCustom.Value == 0;
+            if (noAnglesSelected)
+            {
+                MessageBox.Show("It is mandatory to inform at least one angle", "Angle required");
+                return false;   
+            }
+
+            return true;
+        }
+
         private float[] GenerateArrAngles()
         {
             IList<float> angles = new List<float>();
 
-            if(CkB90.Checked)
+            if (CkB90.Checked)
             {
                 angles.Add(90);
             }
 
-            if(CkB180.Checked)
-            {                
+            if (CkB180.Checked)
+            {
                 angles.Add(180);
             }
 
