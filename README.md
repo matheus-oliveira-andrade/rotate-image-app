@@ -4,6 +4,6 @@
 
 #
 
-## Aplication
+## Application
 
 <img src="appPreview.PNG" alt="App preview">
